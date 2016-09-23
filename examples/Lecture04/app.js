@@ -1,10 +1,20 @@
-(function () {
-'use strict';
+/*
+(...)(...);
 
-angular.module('myFirstApp', [])
+This form is an IIEF, immediately invoked function expression.
+*/
 
-.controller('MyFirstController', function () {
 
-});
+(function() {
 
+    'use strict';
+
+    angular.module("myFirstApp", [])
+
+    .controller('MyFirstController', function($scope) {
+        $scope.name = "Developer";
+        $scope.sayHello = function() {
+            return "Hello Coursera!";
+        }
+    });
 })();

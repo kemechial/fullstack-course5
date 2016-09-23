@@ -7,8 +7,11 @@
     <title>My first AngularJS App</title>
   </head>
   <body>
+    <h1>My First AngularJS App</h1>
     <div ng-controller="MyFirstController">
-
+        {{name}}<br>{{sayHello()}}
+        <input type="text" ng-model="entry">
+        <br>Inside My Input is {{entry}}
     </div>
   </body>
 </html>
