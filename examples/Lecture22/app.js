@@ -6,12 +6,10 @@ angular.module('ShoppingListApp', [])
 .provider('ShoppingListService', ShoppingListServiceProvider)
 .config(Config);
 
-Config.$inject = ['ShoppingListServiceProvider'];
+Config.$inject=['ShoppingListServiceProvider'];
 function Config(ShoppingListServiceProvider) {
-  // Save Yaakov from himself
   ShoppingListServiceProvider.defaults.maxItems = 2;
 }
-
 
 ShoppingListController.$inject = ['ShoppingListService'];
 function ShoppingListController(ShoppingListService) {

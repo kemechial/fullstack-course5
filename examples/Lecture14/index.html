@@ -5,7 +5,7 @@
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
     <style> body { font-size: 1.2em; }</style>
-    <title>The Digest Cycle</title>
+    <title>ng-repeat</title>
   </head>
   <body>
     <h1>The Digest Cycle</h1>
@@ -14,12 +14,14 @@
         Log # of Watchers</button>
         <input type="text" ng-model="name">
       <div>
-        <button ng-click="countOnce()">Up Once Counter (once)</button>
-        <button ng-click="upCounter()">Increment Counter</button>
+        <button ng-click="countOnce()">
+          Up Once Counter (oncer)</button>
+          <button ng-click="upCounter()">
+            Incerement Counter</button>
       </div>
       <div>
-        Once counter: {{ onceCounter }} <br>
-        Regular counter: {{ counter }}
+        Once Counter: {{ onceCounter }} <br>
+        Regular Counter: {{ counter }}
       </div>
     </div>
   </body>
