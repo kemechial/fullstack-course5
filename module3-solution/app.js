@@ -50,7 +50,7 @@
             console.log("search term", searchTerm);
             return $http({
                 method: "GET",
-                url: (ApiBasePath + "/menu_items.json"),
+                url: ("https://davids-restaurant.herokuapp.com/menu_items.json"),
             }).then(
                 function(response) {
                     var foundItems = [];
