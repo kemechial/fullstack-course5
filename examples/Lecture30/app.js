@@ -13,7 +13,11 @@ function ShoppingListDirective() {
     scope: {
       items: '<',
       myTitle: '@title',
+      // Wrong way of doing this,
+      //  we are taking the function out of its context,
+      //  so 'this' inside function does not refer to what it used to refer before
       badRemove: '=',
+      //The right way of doing this
       onRemove: '&'
     },
     controller: ShoppingListDirectiveController,

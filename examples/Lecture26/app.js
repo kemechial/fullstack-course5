@@ -6,7 +6,8 @@ angular.module('ShoppingListDirectiveApp', [])
 .controller('ShoppingListController2', ShoppingListController2)
 .factory('ShoppingListFactory', ShoppingListFactory)
 .directive('listItemDescription', ListItemDescription)
-.directive('listItem', ListItem);
+.directive('listItem',ListItem);
+
 
 
 function ListItem() {

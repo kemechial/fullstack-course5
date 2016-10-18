@@ -4,7 +4,8 @@
 angular.module('ShoppingListDirectiveApp', [])
 .controller('ShoppingListController', ShoppingListController)
 .factory('ShoppingListFactory', ShoppingListFactory)
-// .controller('ShoppingListDirectiveController', ShoppingListDirectiveController)
+// #2 Define function name for controller here (commented out for #1)
+ .controller('ShoppingListDirectiveController', ShoppingDirectiveController)
 .directive('shoppingList', ShoppingListDirective);
 
 
@@ -12,12 +13,18 @@ function ShoppingListDirective() {
   var ddo = {
     templateUrl: 'shoppingList.html',
     scope: {
-      items: '<',
+      // This properties will show up on the instance of the controller
+      items: '<', //We are not planning to change anything on items, so one way binding is plenty
       title: '@'
     },
-    // controller: 'ShoppingListDirectiveController as list',
-    controller: ShoppingListDirectiveController,
-    controllerAs: 'list',
+    // #2 define function above and use string for name here
+    controller: 'ShoppingListDirectiveController as dlist',
+
+    // #1 Define function name for controller here
+    // controller: ShoppingDirectiveController,
+    // controllerAs: 'dlist',
+
+    // Tell angular that we want to bind scope properties to the controller
     bindToController: true
   };
 
@@ -25,7 +32,7 @@ function ShoppingListDirective() {
 }
 
 
-function ShoppingListDirectiveController() {
+function ShoppingDirectiveController() {
   var list = this;
 
   list.cookiesInList = function () {

@@ -49,7 +49,7 @@ function ShoppingListDirectiveLink(scope, element, attrs, controller) {
     // console.log(warningElem);
     // warningElem.css('display', 'block');
 
-    // If jQuery included before Angluar
+    // // If jQuery included before Angluar
     var warningElem = element.find("div.error");
     warningElem.slideDown(900);
   }
