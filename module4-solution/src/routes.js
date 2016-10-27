@@ -30,14 +30,14 @@
         })
 
         .state('categoryItems', {
-            url: '/items-of-the-category/{name}',
+            url: '/items-of-the-category/{name}({short_name})',
             templateUrl: 'src/Templates/main-items.template.html',
             controller: 'ItemsController as menuItem',
             resolve: {
                 response: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
-                    console.log("using name", $stateParams.name2);
-                    console.log("using short_name", $stateParams.name);
-                    return MenuDataService.getItemsForCategory($stateParams.name);
+                    console.log("using name", $stateParams.name);
+                    console.log("using short_name", $stateParams.short_name);
+                    return MenuDataService.getItemsForCategory($stateParams.short_name);
                 }]
             }
         });

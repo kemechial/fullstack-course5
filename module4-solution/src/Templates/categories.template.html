@@ -1,7 +1,7 @@
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="item in $ctrl.cItems">
         <h3>
-            <a ui-sref="categoryItems({ name:item.short_name, name2:item.name })">{{item.name}} ({{item.short_name}})</a>
+            <a ui-sref="categoryItems({ short_name:item.short_name, name:item.name })">{{item.name}} ({{item.short_name}})</a>
         </h3>
         <p ng-if="!item.special_instructions">No Special Instructions Avaliable...</p>
         <p ng-if="item.special_instructions">{{item.special_instructions}}</p>
