@@ -20,7 +20,7 @@
 
         .state('categories', {
             url: '/categories',
-            templateUrl: '/src/Templates/main-categories.template.html',
+            templateUrl: 'src/Templates/main-categories.template.html',
             controller: 'CategoriesController as category',
             resolve: {
                 response: ['MenuDataService', function(MenuDataService) {
@@ -31,7 +31,7 @@
 
         .state('categoryItems', {
             url: '/items-of-the-category/{name}',
-            templateUrl: '/src/Templates/main-items.template.html',
+            templateUrl: 'src/Templates/main-items.template.html',
             controller: 'ItemsController as menuItem',
             resolve: {
                 response: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
