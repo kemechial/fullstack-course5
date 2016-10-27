@@ -1,0 +1,8 @@
+<ol class="breadcrumb">
+  <li class="breadcrumb-item" ui-sref="home">Home</li>
+  <li class="breadcrumb-item" ui-sref="categories">Categories</li>
+  <li class="breadcrumb-item active">{{menuItem.name}}</li>
+</ol>
+
+<h3>Items in the Category ({{menuItem.name}})</h3>
+<items m-items="menuItem.items"></items>
